@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="HTML, CSS, Javascript">
+      <meta name="author" content="Pawel Pieta">
+      body {background-color:yellow}
+      </style>
+      <script>
+      function surprise(){
+        alert("Hello!");
+      }
+      </script>
+      <title>
+        This is my Coursera Project
+      </title>
+    </head>
+    <body>
+      <form action="http://ihome.ust.hk/~rossiter/cgibin/
+show_everything.php" method="get">
+        <p>Please enter any feedback you have.</p>
+        <textarea rows="3" cols="60" name="feedback">
+          please enter your text here
+        </textarea>
+        <input type="submit" value="Send">
+      </form>
+      <form>
+        Please enter your name. <br>
+        <input type="text" name="feedback"><br><br>
+
+        Please select each of the following that you have. <br>
+        <input type="checkbox" name="items" value="car">Car <br>
+        <input type="checkbox" name="items" value="teddy bear">Teddy bear <br>
+        <input type="checkbox" name="items" value="toothbrush">Toothbrush <br><br>
+
+        Please indicate your intelligence level.<br>
+        <input type="radio" name="iq" value="high">High <br>
+        <input type="radio" name="iq" value="medium" checked>Medium<br>
+        <input type="radio" name="iq" value="low">Low <br><br>
+      </form>
+      <form>
+        <p>What is the secret password?</p>
+        <input type"password" name="userpassword"><br>
+      </form>
+        <p>Wjat city would you like to go to?</p>
+        <select name="cities">
+          <option value="hk">Hong Kong</option>
+          <option value="vc">Vancouver</option>
+          <option value="sf">San Francisco</option>
+        </select>
+      </form>
+      <form>
+        <p>Please fill in the following information:</p>
+        <label for="firstname">Firstname:</label>
+        <input type="text" name="firstname" value="Pawel" autofocus>
+        <br>
+        <label for="lastname">Last name:</label>
+        <input type="text" name="lastname" placeholder="Your last name goes here">
+        ,br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" required>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+      <form method="post" enctype="multipart/form-data"
+      action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+      <p>Select the file you want to upload</p>
+      <input type="file" name="fileToUpload">
+      <p>Press this button to send it</p>
+      <input type="submit" value="Upload the file">
+    </form>
+    <form> action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+      <label for"age">Your age:</label>
+      <input type="numer" min="0" max="99" step="1" value="18" name="age" required><br>
+      <label for="birthday">Your birthday:</label>
+      <input type="date" name="birthday"><br>
+      <label for="wakeup">You want to wake up at:</label>
+      <input type="time" name="wakeup"><br>
+      <label for=color">Your favorite color:</label>
+      <input type="color" name="color"><br>
+      <label for="mood">Your mood:</label>
+      Bad <input type="range" min="0" max="100" step="5" value="50" name="mood">Good<br>
+      <input type="submit" value="Submit!">
+    </form>
+    <form>
+<fieldset>
+<legend>Personal Information</legend>
+First name? <input type="text" name="firstName"> <br>
+Last name? <input type="text" name="lastName"> <br>
+</fieldset> <br>
+<fieldset>
+<legend>Favourite Things</legend>
+Favourite cartoon? <input type="text" name="favCartoon"> <br>
+Favourite pizza? <input type="text" name="lastName"> <br>
+</fieldset> <br>
+<input type="submit" value="Send">
+</form>
+    </body>
+  </html>
