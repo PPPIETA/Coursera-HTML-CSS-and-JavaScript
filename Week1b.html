@@ -2,16 +2,19 @@
   <html>
     <head>
       <style>
-      <meta charset="UTF-8">
-      <meta name="keywords" content="HTML, CSS, Javascript">
-      <meta name="author" content="Pawel Pieta">
-      body {background-color:yellow}
+      <meta charset="UTF-8"/>
+      <meta name="keywords" content="HTML, CSS, Javascript"/>
+      <meta name="author" content="Pawel Pieta"/>
+      #field1 {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+
+     .field1 {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+
+/*      fieldset {background:lightyellow; border:10px solid yellow; margin-bottom:10px; width:720px}
+*/
+      label {width:180px; display:inline-block; text-align: right; vertical-align: top}
+      .auto1 {width:auto; display:inline-block; text-align: right; vertical-align: top}
+      .text1 {width:360px; height:50px}
       </style>
-      <script>
-      function surprise(){
-        alert("Hello!");
-      }
-      </script>
       <title>
         This is my Coursera Project
       </title>
@@ -19,17 +22,18 @@
     <body>
     <h1>Please Enter Your Details For Our Dating Website!</h1><br>
     <form method="post" enctype="multipart/form-data" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
-      <fieldset>
+      <fieldset class="field1" id="field1">
         <legend>Your Face</legend>
         <label for="yourImage">Your image:</label>
         <input type="file" id="yourImage" name="yourImage" required><br>
-        Image preview:<img src="" id="preview"><br>
+        <label>Image preview:</label>
+        <img src="" id="preview"><br>
       </fieldset> <br>
-      <fieldset>
+      <fieldset class="field1" id="field1">
         <legend>Your General Details</legend>
         <label for="name">Name:</label>
         <input type="text" name="name" placeholder="Your full name" required><br>
-        <label for="gender">Gender:</label>
+        <label for="gender" class="auto1">Gender:</label>
         <input type="radio" name="gender" value="Male" required>Male<input type="radio" name="Female" value="Female" required>Female<br>
         <label for="age">Age:</label>
         <input type="text" name="age" required><br>
@@ -47,22 +51,22 @@
           <option value="russia">Russia</option>
         </select>
       </fieldset><br>
-      <fieldset>
+      <fieldset class="field1" id="field">
         <legend>Your indicators</legend>
         <label for="height">Height:</label>
         Short<input type="range" min="0" max="100" step="5" value="50" name="height">Tall<br>
         <label for="salary">Salary:</label>
         Poor<input type="range" min="0" max="100" step="5" value="50" name="salary">Rich<br>
       </fieldset><br>
-      <fieldset>
+      <fieldset class="field1" id="field">
         <legend>Your Contact Information</legend>
         <label for="email">Email:</label>
         <input type="email" name="email" required><br>
         <label for="tel">Mobile:</label>
         <input type="tel" name="tel"><br>
         <label for="address">Address:</label>
-        <textarea name="adress" rows="2" cols="60" placeholder="Your adress go here"></textarea><br>
-        <label for="contact">Method to contact you</label>
+        <textarea name="adress" rows="2" cols="60" placeholder="Your adress go here" class="text1"></textarea><br>
+        <label for="contact" class="auto1">Method to contact you</label>
         <input type="checkbox" name="contact" value="email">Email<input type="checkbox" name="contact" value="whatsapp">Whatsapp<input type="checkbox" name="contact" value="inappchat">In-app chat<br>
       </fieldset>
       <input type="submit" value="Submit!">
