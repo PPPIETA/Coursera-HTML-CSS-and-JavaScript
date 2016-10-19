@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="HTML, CSS, Javascript">
+      <meta name="author" content="Pawel Pieta">
+      body {background-color:yellow}
+      </style>
+      <script>
+      function surprise(){
+        alert("Hello!");
+      }
+      </script>
+      <title>
+        This is my Coursera Project
+      </title>
+    </head>
+    <body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1><br>
+    <form method="post" enctype="multipart/form-data" action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php">
+      <fieldset>
+        <legend>Your Face</legend>
+        <label for="yourImage">Your image:</label>
+        <input type="file" id="yourImage" name="yourImage" required><br>
+        Image preview:<img src="" id="preview"><br>
+      </fieldset> <br>
+      <fieldset>
+        <legend>Your General Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Your full name" required><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male" required>Male<input type="radio" name="Female" value="Female" required>Female<br>
+        <label for="age">Age:</label>
+        <input type="text" name="age" required><br>
+        <label for="birthday">Date of birth:</label>
+        <input type="date" name="birthday"><br>
+        <label for="color">Favorite color:</label>
+        <input type="color" name="color"><br>
+        <label for="country">Which country:</label>
+        <select name="country">
+          <option value="noselection"></option>
+          <option value="poland">Poland</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="italy">Italy</option>
+          <option value="russia">Russia</option>
+        </select>
+      </fieldset><br>
+      <fieldset>
+        <legend>Your indicators</legend>
+        <label for="height">Height:</label>
+        Short<input type="range" min="0" max="100" step="5" value="50" name="height">Tall<br>
+        <label for="salary">Salary:</label>
+        Poor<input type="range" min="0" max="100" step="5" value="50" name="salary">Rich<br>
+      </fieldset><br>
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+        <label for="tel">Mobile:</label>
+        <input type="tel" name="tel"><br>
+        <label for="address">Address:</label>
+        <textarea name="adress" rows="2" cols="60" placeholder="Your adress go here"></textarea><br>
+        <label for="contact">Method to contact you</label>
+        <input type="checkbox" name="contact" value="email">Email<input type="checkbox" name="contact" value="whatsapp">Whatsapp<input type="checkbox" name="contact" value="inappchat">In-app chat<br>
+      </fieldset>
+      <input type="submit" value="Submit!">
+    </form>
+    </body>
+  </html>
