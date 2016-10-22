@@ -10,108 +10,38 @@
         Coursera Guessing Game
       </title>
       <script>
-      function greet_the_user(){
-        alert('Hello!');
-        alert('we start soon...');
-        prompt('Excited?!');
-      }
-
-      function check_user_age(){
-        if (age_of_user()<18)
-        alert("please go to another page.");
-      }
-      function age_of_user(){
-        var age_text, age;
-        age_text=prompt("what is your age?");
-        age=parseInt(age_text);
-        return age;
-      }
-
-      alert("It's my "+build_great(5)+"grandmother!");
-      function build_great(depth){
-        if (depth>0)
-        return "great "+build_great(depth-1);
-        else
-          return "";
-      }
-
-      var user_name;
-      user_name=prompt("Whati is your name?");
-      if (user_name=="dave")
-      alert("Great name!");
-      else if (user_name=="jogesh")
-        alert("Pretty good name!");
-      else if (user_name=="oz")
-        alert("Excellent name!");
-      else
-        alert("Your name isn't great...");
-
-      var user_name=prompt("What is your name?");
-
-      switch(user_name){
-        case"dave":
-        alert("Great name!");
-        break;
-        case"jogesh":
-        alert("Pretty good name!");
-        break;
-        default:
-        alert("Your name isn't great, never mind...");
-      }
-
-      var response, finished;
-      finished=false;
-      alert("Rossiter is a great name.");
-      while (!finished){
-        response=prompt("Do you agree?");
-        if (response.indexOf("y")==0)
-        finished=true;
-      }
-
-      var response, finished;
-      finished=false;
-      alert("Rossiter is a great name.");
-      do{
-        response=prompt("DO you agree?");
-        if(response.indexOf("y")==0)
-        finished=true;
-      } while (!finished);
-
-      function show_money(){
-        money=2;
-        alert("In the function, the value is: "+money);
-      }
-      show_money();
-      alert("In the main part, the value is: "+money);
-
-      var you_are_male=true;
-      var you_are_female=!you_are_male;
-      alert("you_are_male is "+you_are_male);
-      alert("you_are_female is "+you_are_female);
-
-      var random_number;
-      random_number=Math.random()*50;
-      random_number=Math.floor(random_number);
-      alert("Random number in the range 0 to 49: " +random_number);
+      var colors = [aliceblue, aqua, azure, black, blue, brown, coral, cyan, dodgerblue, fuchsia, gold, green, honeydew, indigo, khaki, lavender, magenta, navy, orange, pink];
 
       var target;
+      var target_integer;
       var guess_input_text;
       var guess_input;
       var finished=false;
       var guesses=0;
 
-      function do_game(){
-        var random_number=Math.random()*100;
+      var colors_length = colors.length;
+      var response, finished;
+      finished=false;
+
+      function list_of_colors(){
+        for (i=0;i<colors_length;i++){
+          return colors[i]+", "
+        }
+      };
+
+      function color_guessing_game(){
+        var random_number=Math.random()*colors.length;
         var random_number_integer=Math.floor(random_number);
-        target=random_number__integer+1;
+        target_integer=random_number__integer+1;
+        target=colors[target_integer];
 
         while (!finished){
-          guess_input_text=prompt("I'm thinking of a number "+"in the range 1 to 100.\n\n"+"What is the number? ");
+          guess_input_text=prompt("I'm thinking of one color from a list below:\n\n"+list_of_colors+"What is the color? ");
           guess_input = parseInt(guess_input_text);
           guesses +=1;
           finished=check_guess();
         }
-      }
+      };
 
       function check_guess(){
         if (isNaN(guess_input)){
@@ -132,9 +62,9 @@
         }
         alert("You got it! The number was "+target+".\n\nIt took you "+guesses+" guesses to get the number!");
         return true;
-      }
+      };
       </script>
     </head>
-    <body onload="greet_the_user()">
+    <body onload="color_guessing_game()">
     </body>
   </html>
