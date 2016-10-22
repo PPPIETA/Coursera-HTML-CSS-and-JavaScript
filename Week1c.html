@@ -15,7 +15,12 @@
       label {width:180px; display:inline-block; text-align: right; vertical-align: top; margin-bottom: 5px;}
       div {width:80px; display:inline-block; text-align:center; vertical-align: top; background-color: green;}
       .red {background-color: red;}
-      </style>
+      label:hover {font-size:1.25em;}
+      label:hover + input {font-size:1.25em;}
+      label:hover + .green {font-size:1.25em;}
+      label:hover ~ .red {font-size:1.25em;}
+      input:hover {font-size:1.25em;}
+     </style>
       <title>
         This is my Coursera Project
       </title>
@@ -55,9 +60,9 @@
       <fieldset class="field3">
         <legend>Your indicators</legend>
         <label for="height">Height:</label>
-        <div>Short</div><input type="range" min="0" max="100" step="5" value="50" name="height"><div class="red">Tall</div><br>
+        <div class="green">Short</div><input type="range" min="0" max="100" step="5" value="50" name="height"><div class="red">Tall</div><br>
         <label for="salary">Salary:</label>
-        <div>Poor</div><input type="range" min="0" max="100" step="5" value="50" name="salary"><div class="red">Rich</div><br>
+        <div class="green">Poor</div><input type="range" min="0" max="100" step="5" value="50" name="salary"><div class="red">Rich</div><br>
       </fieldset><br>
       <fieldset class="field4">
         <legend>Your Contact Information</legend>
@@ -72,5 +77,6 @@
       </fieldset>
       <input type="submit" value="Submit!">
     </form>
+    <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
     </body>
   </html>
