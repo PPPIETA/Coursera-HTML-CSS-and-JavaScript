@@ -22,7 +22,6 @@
       var colors_length = colors.length;
       colors_listed="";
 
-
       function list_of_colors(){
         for (i=0;i<colors.length;i++){
           colors_listed= colors_listed + colors[i] + ", ";
@@ -30,14 +29,39 @@
         return colors_listed;
       };
 
-      function check_if_color_exist(){
+/*      var color_exist = check_if_color_exist();
+ */
+
+      var color_exist = colors.indexOf(guess_input_text);
+
+
+/*      function check_if_color_exist(){
+        if (colors.indexOf(guess_input_text)) {
+          return true;
+        } else {
+          return false;
+        };
+    };
+*/
+
+/*      function check_if_color_exist(){
+      if ( guess_input_text in colors ) {
+        return true;
+    } else {
+      return false;
+    };
+};
+*/
+
+/*      function check_if_color_exist(){
         for(i=0;i<colors.length;i++){
-          if(colors[i]===guess_input_text){
-            return false;
+          if(colors[i]!=guess_input_text){
+            return true;
+            break;
           }
         }
       };
-
+*/
       function color_guessing_game(){
         alert("Hello in the 'Color Guessing Game'");
         alert(colors_length);
@@ -45,28 +69,27 @@
         var random_number_integer=Math.floor(random_number);
         target_integer=random_number_integer;
         target=colors[target_integer];
+        list_of_colors();
 
         alert(target);
+        alert(typeof colors[4]);
 
         while (!finished){
-          guess_input_text=prompt("I'm thinking of one color from a list below:\n\n"+list_of_colors()+"\n\n"+"What is the color? ");
+          guess_input_text=prompt("I'm thinking of one color from a list below:\n\n"+colors_listed+"\n\n"+"What is the color? ");
 /*          guess_input = parseInt(guess_input_text);
 */          guesses +=1;
+            check_if_color_exist();
+            alert(color_exist);
+            alert(typeof guess_input_text);
           finished=check_guess();
         }
       };
 
       function check_guess(){
-        if (check_if_color_exist()===false){
-          alert("I don't know this color.\n\n"+"Please enter a color from the list below:\n\n"+list_of_colors());
+        if (color_exist=== -1){
+          alert("I don't know this color.\n\n"+"Please enter a color from the list below:\n\n"+colors_listed+"\n\n");
           return false;
         }
-
-/*        if((colors[guess_input]<100)||(guess_input>100)){
-          alert("Please enter an integer number in the range 1 to 100.");
-          return false;
-        }
-*/
         if (guess_input_text>target){
           alert("Your color is higher in alphabetical order than mine!");
           return false;
@@ -76,7 +99,7 @@
           return false;
         }
         myBody=document.getElementByTagName("body")[0];
-        myBody.style.background=target
+        myBody.style.background=target;
         alert("You got it! The number was "+target+".\n\nIt took you "+guesses+" guesses to get the color!");
         return true;
       };
